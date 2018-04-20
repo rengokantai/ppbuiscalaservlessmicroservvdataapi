@@ -41,3 +41,32 @@ service oriented architecture
 - Smart data pipeline and/or middleware
 - https://
 
+### Setting Up a Lambda in the AWS Management Console
+```
+import json
+def respond(err,res=None):
+  return {
+    'statusCode': '400' if err else '200',
+    'body':err.message if err else json.dumps(res),
+    'headers': {
+      'Content-Type':'application/json',
+    },
+  }
+def parse_parameter(event):
+  try:
+    returnParameters = event['queryStringParameters'].copy()
+  except Exception as e:
+    returnParameters = {}
+  try:
+  
+def lambda_handler(event,context):
+  validated_parameters = parse_parameters(event)
+  if validated_parameters['err'] is not None:
+    return respond(validated_parameters['err'])
+  else:
+    return respond(None,validated_parameters.get('parsedParams',None))
+  
+
+
+
+
