@@ -58,6 +58,15 @@ def parse_parameter(event):
   except Exception as e:
     returnParameters = {}
   try:
+    resource_id = event.get('path','').split('/')[-1]
+    if resource_id.isdigit():
+      returnParameters['resource_id'] = resource_id
+    else:
+      return {"parsedParams":None,"err":Exception("not a number")}
+  except Exception as e:
+    return {"parsedParams":None,"err":e}
+  return {"parsedParams"returnParameters,"err":None}
+    
   
 def lambda_handler(event,context):
   validated_parameters = parse_parameters(event)
