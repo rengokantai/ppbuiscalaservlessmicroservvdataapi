@@ -11,3 +11,23 @@ Containers
   - Cluster and image configuration, and maintaince effort
   - Integration effort with other AWS managed services
   - Pay for idle containers
+
+
+hand write a condition
+```
+{
+  "Version":"2012-12-07",
+  "Statement": {
+    "Effect":"Allow",
+    "Action":["dynamodb:GetItem",
+    "dynamodb:Scan",
+    "dynamodb:Query"],
+    "Resource":"arn:aws:dynamodb:us-west-1:123:table/book",
+    "Condition":{
+      "IpAddress":{
+        "aws:SourceIp":"1.2.3.4/16"
+      }
+    }
+  }
+}
+```
