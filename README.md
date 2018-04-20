@@ -31,3 +31,13 @@ hand write a condition
   }
 }
 ```
+
+### Monolithic and Microservice
+service oriented architecture
+- Built as single code base
+- More granular than multi-tier
+- Standardised service contracts and registry
+- Autonomy and Abstraction
+- Smart data pipeline and/or middleware
+- https://
+
