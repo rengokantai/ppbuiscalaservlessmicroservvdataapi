@@ -84,6 +84,7 @@ def lambda_handler(event,context):
 
 ## 6. Building and Deploying Your Serverless Stack
 ### Overview of serverless stack build and deploy options
+
 ### Creating an S3 Bucket, IAM policies and IAM roles resources
 ### Building and Deploying API Gateway, Lambda
 ## 7. Conclusion
