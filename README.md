@@ -76,6 +76,18 @@ def lambda_handler(event,context):
     return respond(None,validated_parameters.get('parsedParams',None))
   
 
+```
 
 
+
+
+
+## 6. Building and Deploying Your Serverless Stack
+### Overview of serverless stack build and deploy options
+### Creating an S3 Bucket, IAM policies and IAM roles resources
+### Building and Deploying API Gateway, Lambda
+## 7. Conclusion
+### Build a Scalable Serverless Microservice Data API Conclusions
+note
+- Monolithic and microservice architecture
 
