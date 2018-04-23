@@ -84,6 +84,22 @@ def lambda_handler(event,context):
 
 ## 6. Building and Deploying Your Serverless Stack
 ### Overview of serverless stack build and deploy options
+Infrastructure as code
+- Process of managing and provisioning resources through definition files or code
+- Centralized implementation and version control
+- Manage change via validation and testing
+- Standard deployment process
+- Repeatabily in other regions
+
+```
+aws s3api create-bucket --bucket bkname --region eu-west-1 --create-bucket-configuration LocationConstraint=eu-west-1
+```
+create policy-doc
+```
+aws iam create-policy --policy-name dynamonm --policy-document file://json
+```
+
+
 
 ### Creating an S3 Bucket, IAM policies and IAM roles resources
 ### Building and Deploying API Gateway, Lambda
